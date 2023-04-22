@@ -31,7 +31,7 @@ if place:
             figure = px.line(x=date_time, y=temperatures,
                              labels={"x": "Date", "y": "Temperature (C)"})
             # figure.update_layout(yaxis=dict(tickmode='linear', tick0=0, dtick=10))
-            figure.update_yaxes(range=[0, 40])
+            figure.update_yaxes(range=[10, 25])
             st.plotly_chart(figure)
 
         if option == "Sky":
