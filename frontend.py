@@ -30,7 +30,8 @@ if place:
             # Create the temperature plot.
             figure = px.line(x=date_time, y=temperatures,
                              labels={"x": "Date", "y": "Temperature (C)"})
-            figure.update_layout(yaxis=dict(tickmode='linear', tick0=0, dtick=10))
+            # figure.update_layout(yaxis=dict(tickmode='linear', tick0=0, dtick=10))
+            fig.update_yaxes(range=[0, 2])
             st.plotly_chart(figure)
 
         if option == "Sky":
