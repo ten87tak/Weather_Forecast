@@ -24,7 +24,7 @@ if place:
         # print(filtered_data)
 
         if option == "Temperature":
-            temperatures = [item["main"]["temp"] / 10 for item in filtered_data]
+            temperatures = [item["main"]["temp"] / 10 - 10 for item in filtered_data]
             date_time = [item["dt_txt"] for item in filtered_data]
 
             # Create the temperature plot.
